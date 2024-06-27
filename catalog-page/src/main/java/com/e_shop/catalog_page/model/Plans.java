@@ -1,26 +1,23 @@
-package com.e_shop.catalog_page_plans;
+package com.e_shop.catalog_page.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Plans {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long plansId;
 	private String name;
 	private String description;
-	private int price;
+	private double price;
 	private String dataLimit;
 	
-	public int getId() {
-		return id;
+	public Long getPlansId() {
+		return plansId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setPlansId(Long id) {
+		this.plansId = id;
 	}
 	public String getName() {
 		return name;
@@ -34,10 +31,10 @@ public class Plans {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	public String getDataLimit() {

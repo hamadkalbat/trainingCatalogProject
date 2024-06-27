@@ -1,4 +1,4 @@
-package com.e_shop.catalog_page_Stock;
+package com.e_shop.catalog_page.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,19 +10,19 @@ public class Stock {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private int inStock;
+	private Long stockId;
+	private Long inStock;
 		
-	public int getId() {
-		return id;
+	public Long getStockId() {
+		return stockId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setStockId(Long id) {
+		this.stockId = id;
 	}
-	public int getInStock() {
+	public Long getInStock() {
 		return inStock;
 	}
-	public void setInStock(int inStock) {
+	public void setInStock(Long inStock) {
 		this.inStock = inStock;
 	}	
 }

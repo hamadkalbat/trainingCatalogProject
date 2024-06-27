@@ -1,26 +1,23 @@
-package com.e_shop.catalog_page_User;
+package com.e_shop.catalog_page.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class User {
+public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long userId;
 	private String username;
 	private String password;
 	private String email;
 	private String phoneNumber;
 	
-	public int getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setUserId(Long id) {
+		this.userId = id;
 	}
 	public String getUsername() {
 		return username;
