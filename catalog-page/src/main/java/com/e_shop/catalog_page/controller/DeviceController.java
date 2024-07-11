@@ -9,6 +9,7 @@ import com.e_shop.catalog_page.model.Device;
 import com.e_shop.catalog_page.service.DeviceService;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/devices")  // Base path for the controller
 public class DeviceController {
     @Autowired
